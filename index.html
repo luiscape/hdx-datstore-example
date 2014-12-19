@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <link href="http/css/c3.css" rel="stylesheet" type="text/css">
+    <link href="http/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- loading dependencies for charting -->
+    <script src="http/js/data_collection-1.1.6-min.js"></script>
+    <script src="http/js/jsonpath.js"></script>
+    <script src="http/js/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http/js/c3.min.js"></script>
+
+    <!-- sparklines function -->
+    <script src="http/js/sparklines.js"></script>
+
+    <!-- datasets function -->
+    <script src="http/js/datasets.js"></script>
+
+  </head>
+  <body>
+  <div class="container">
+    <div class="section">
+        <h2><span>Syria Data on HDX</span></h2>
+        <p>Example visualizations from Syria-related data on the <a href="https://data.hdx.rwlabs.org">Humanitarian Data Exchange</a>.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+        <div>
+          <div class="row">
+            <div class="col-md-4">
+              <h3>Syrian Refugees</h3>
+              <div id="total-persons"></div>
+            </div>
+            <div class="col-md-4">
+              <h3>People Awaiting Registration</h3>
+              <div id="persons-awaiting-registration"></div>
+            </div>
+            <div class="col-md-4">
+              <h3>Registered Syrian Refugees</h3>
+              <div id="registered-refugees"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="section">
+    <div id="dataset-container"></div>
+  </div>
+
+
+  <style>
+  .c3-line {
+    stroke-width: 2px;
+  }
+  #dataset-container {
+      /* max-width:100%; */
+      padding-left: 100px;
+      height:50%;
+      overflow-x: auto;
+      overflow-y: auto;
+      /* white-space: nowrap; */
+  }
+  #dataset-container div {
+      max-width:200px;
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 15px;
+  }
+
+  </style>
+
+  </body>
+</html>
