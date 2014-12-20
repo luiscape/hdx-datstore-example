@@ -1,7 +1,5 @@
 // functions to get datasets from HDX
-// function to generate time-series
-// sparklines using an API endpoint from
-// HDX.
+// based on a country (group).
 fetchDatasets = function(url, div_id) {
 
   d3.json(url, function(error, json) {
@@ -39,10 +37,13 @@ fetchDatasets = function(url, div_id) {
 
 };
 
-buildHDXGroupUrl = function(id) {
-  base = 'https://data.hdx.rwlabs.org/api/action/group_show?id='
-  group_id = id
-  url = base + group_id;
+// simple function to build a group url
+// endpoint from HDX. the only parameter
+// is an iso 3 letter code.
+buildHDXGroupUrl = function(iso) {
+  base = 'https://data.hdx.rwlabs.org/api/action/group_show?id='  // base url
+  group_id = iso;  // iso 3 letter code
+  url = base + group_id;  // query url
   return(url)
 };
 

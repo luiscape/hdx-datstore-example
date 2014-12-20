@@ -20,7 +20,7 @@
   <div class="container">
     <div class="section">
         <h2><span>Syria Data on HDX</span></h2>
-        <p>Example visualizations from Syria-related data on the <a href="https://data.hdx.rwlabs.org">Humanitarian Data Exchange</a>.</p>
+        <p>Example visualizations from Syria-related data available on the <a href="https://data.hdx.rwlabs.org">Humanitarian Data Exchange</a>. This example queries an API endpoint from a <a href="https://data.hdx.rwlabs.org/dataset/unhcr-information-portal-data">specific resource on HDX</a> (i.e. a CSV file). That resource is the result from a transformation made by querying the official UNHCR API.</p>
     </div>
   </div>
 
@@ -29,7 +29,7 @@
         <div>
           <div class="row">
             <div class="col-md-4">
-              <h3>Syrian Refugees</h3>
+              <h3>Total Persons of Concern</h3>
               <div id="total-persons"></div>
             </div>
             <div class="col-md-4">
@@ -45,6 +45,7 @@
       </div>
   </div>
 
+  <hr />
   <div class="section">
     <div id="dataset-container"></div>
   </div>
@@ -61,6 +62,7 @@
       overflow-x: auto;
       overflow-y: auto;
       /* white-space: nowrap; */
+      font-size: 12px;
   }
   #dataset-container div {
       max-width:200px;
